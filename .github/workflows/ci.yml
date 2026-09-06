@@ -60,6 +60,13 @@ jobs:
 
       - name: List generated files
         run: ls -la dist/
+      - name: Check Docker files
+        run: |
+          ls -la
+          echo "===== nginx.conf ====="
+          cat nginx.conf
+          echo "===== Dockerfile ====="
+          cat Dockerfile
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
