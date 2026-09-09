@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Usuario, UsuarioFiltro } from '../model/usuario';
 
-const API_URL = 'http://localhost:8080/api/users';//'https://jsonplaceholder.typicode.com/users';
+const API_URL = 'http://localhost:8080/api/v1/users';//'https://jsonplaceholder.typicode.com/users';
 
 export const UsuarioService = {
     getAllUsuarios: async (filtro: UsuarioFiltro) => {
