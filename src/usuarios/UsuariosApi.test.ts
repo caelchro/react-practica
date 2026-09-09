@@ -74,7 +74,7 @@ describe('UsuarioService', () => {
 
         expect(mockedAxios.get).toHaveBeenCalledTimes(1);
         expect(mockedAxios.get).toHaveBeenCalledWith(
-            'http://localhost:8080/api/users',
+            'http://localhost:8080/api/v1/users',
             {
                 params: filtro
             }
@@ -95,7 +95,7 @@ describe('UsuarioService', () => {
 
         expect(mockedAxios.get).toHaveBeenCalledTimes(1);
         expect(mockedAxios.get).toHaveBeenCalledWith(
-            'http://localhost:8080/api/users/1'
+            'http://localhost:8080/api/v1/users/1'
         );
 
         expect(resultado).toEqual(usuario1);
@@ -110,7 +110,7 @@ describe('UsuarioService', () => {
 
         expect(mockedAxios.post).toHaveBeenCalledTimes(1);
         expect(mockedAxios.post).toHaveBeenCalledWith(
-            'http://localhost:8080/api/users',
+            'http://localhost:8080/api/v1/users',
             usuario1
         );
 
@@ -132,7 +132,7 @@ describe('UsuarioService', () => {
 
         expect(mockedAxios.put).toHaveBeenCalledTimes(1);
         expect(mockedAxios.put).toHaveBeenCalledWith(
-            'http://localhost:8080/api/users/1',
+            'http://localhost:8080/api/v1/users/1',
             usuario1
         );
 
@@ -151,7 +151,7 @@ describe('UsuarioService', () => {
 
         expect(mockedAxios.delete).toHaveBeenCalledTimes(1);
         expect(mockedAxios.delete).toHaveBeenCalledWith(
-            'http://localhost:8080/api/users/1'
+            'http://localhost:8080/api/v1/users/1'
         );
 
         expect(resultado).toEqual([
